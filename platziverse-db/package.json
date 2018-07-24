@@ -4,17 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "test": "DEBUG=platziverse:* nyc --reporter=lcov ava test/ --verbose",
+    "setup": "DEBUG=platziverse:* node setup.js",
+    "lint": "eslint .",
+    "postgres:dev": "docker run -e POSTGRES_PASSWORD=pass -e POSTGRES_USER=tata -e POSTGRES_DB=platziverse -p 5432:5432 -d postgres",
+    "dev:env": "npm run postgres:dev"
   },
   "author": "jessica rodriguez",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.25.0",
     "eslint": "^5.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "nyc": "^12.0.2",
+    "proxyquire": "^2.0.1",
+    "sinon": "^6.1.4"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "defaults": "^1.0.3",
+    "inquirer": "^6.0.0",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.0.2"
   }
 }
