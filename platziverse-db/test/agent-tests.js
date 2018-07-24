@@ -107,11 +107,11 @@ test.serial('AgentFindByUuid', async t => {
 })
 
 test.serial('AgentFindConnected', async t => {
-  let agents = await db.Agent.findConneted()
+  let agents = await db.Agent.findConnected()
 
   t.true(AgentStub.findAll.called, 'findAll should be called on model')
   t.true(AgentStub.findAll.calledOnce, 'findAll should be called once')
-  t.true(AgentStub.findOne.calledWith(connectedArgs), 'findAll should be called without arguments')
+  t.true(AgentStub.findAll.calledWith(connectedArgs), 'findAll should be called without arguments')
 
   t.is(agents.length, agentFixtures.connected.length, 'agents should be the same length')
   t.deepEqual(agents, agentFixtures.connected, 'agents should be the same')
@@ -122,7 +122,7 @@ test.serial('AgentFindAll', async t => {
 
   t.true(AgentStub.findAll.called, 'findAll should be called')
   t.true(AgentStub.findAll.calledOnce, 'findAll should be called once')
-  t.true(AgentStub.findOne.calledWith(), 'findAll should be called without arguments')
+  t.true(AgentStub.findAll.calledWith(), 'findAll should be called without arguments')
 
   t.is(agents.length, agentFixtures.all.length, 'agents should be the same length')
   t.deepEqual(agents, agentFixtures.all, 'agents should be the same')
@@ -133,7 +133,7 @@ test.serial('AgentFindByUsername', async t => {
 
   t.true(AgentStub.findAll.called, 'findAll should be called')
   t.true(AgentStub.findAll.calledOnce, 'findAll should be called once')
-  t.true(AgentStub.findOne.calledWith(usernameArgs), 'findAll should be called with username arguments')
+  t.true(AgentStub.findAll.calledWith(usernameArgs), 'findAll should be called with username arguments')
 
   t.is(agents.length, agentFixtures.tata.length, 'agents should be the same length')
   t.deepEqual(agents, agentFixtures.tata, 'agents should be the same')

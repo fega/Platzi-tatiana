@@ -44,12 +44,13 @@ module.exports = function setupAgent (AgentModel) {
   }
 
   function findByUsername (username) {
-    return AgentModel.findAll({
+    const query = {
       where: {
         username,
         connected: true
       }
-    })
+    }
+    return AgentModel.findAll(query)
   }
 
   return {
