@@ -1,4 +1,4 @@
-# platziversw-db
+# platziverse-db
 
 ##usage
 

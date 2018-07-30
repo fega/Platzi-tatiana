@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=platziverse:* nyc --reporter=lcov ava test/ --verbose",
+    "test": "DEBUG=platziverse:* nyc --reporter=lcov ava test/metric-test.js --verbose",
     "setup": "DEBUG=platziverse:* node setup.js",
     "lint": "eslint .",
     "postgres:dev": "docker run -e POSTGRES_PASSWORD=pass -e POSTGRES_USER=tata -e POSTGRES_DB=platziverse -p 5432:5432 -d postgres",

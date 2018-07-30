@@ -5,9 +5,11 @@
   "description": "a simple IoT - MQTT Server",
   "main": "server.js",
   "scripts": {
+    "postgres:dev": "docker run -e POSTGRES_PASSWORD=pass -e POSTGRES_USER=tata -e POSTGRES_DB=platziverse -p 5432:5432 -d postgres",
+    "redis-dev": "docker run -d -p 6379:6379  redis",
     "start": "NODE_ENV=production node server.js",
-    "start-dev": "DEBUG=platziverse:* odemon server.js",
-    "lint": "esint"
+    "start-dev": "DEBUG=platziverse:* nodemon server.js",
+    "lint": "eslint"
   },
   "author": "Jessica tatiana <rodriguezjessicatatiana@gmail.com>",
   "license": "MIT",
@@ -15,6 +17,7 @@
     "chalk": "^2.4.1",
     "debug": "^3.1.0",
     "mosca": "^2.8.3",
+    "platziverse-db": "file:../platziverse-db",
     "redis": "^2.8.0"
   }
 }
