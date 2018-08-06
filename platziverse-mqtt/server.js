@@ -65,7 +65,7 @@ server.on('clientDisconnected', async (client)=>{
             })
         })
 
-        debud(`client (${client.id}) associated to Agent (${agent.uuid}) marked as disconnected`)
+        debug(`client (${client.id}) associated to Agent (${agent.uuid}) marked as disconnected`)
     }
 })
 

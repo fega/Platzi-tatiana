@@ -1,0 +1,11 @@
+{
+  "name": "platziverse-cli",
+  "version": "1.0.0",
+  "description": "a simple IoT platform - CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jessica tatiana <rodriguezjessicatatiana@gmail.com>",
+  "license": "MIT"
+}
