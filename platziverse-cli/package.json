@@ -1,11 +1,18 @@
 {
   "name": "platziverse-cli",
   "version": "1.0.0",
+  "private": true,
   "description": "a simple IoT platform - CLI",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "bin": "platziverse.js",
+  "scripts": {},
   "author": "Jessica tatiana <rodriguezjessicatatiana@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "args": "^5.0.0",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.5",
+    "minimist": "^1.2.0",
+    "moment": "^2.22.2",
+    "platziverse-agent": "file:../platziverse-agent"
+  }
 }
